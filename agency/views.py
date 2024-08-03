@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .models import Agency
+from .serializers import AgencySerializer
 
-# Create your views here.
+
+class AgencyListCreate(generics.ListCreateAPIView):
+    queryset = Agency.objects.all()
+    serializer_class = AgencySerializer
+
+
+class AgencyRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Agency.objects.all()
+    serializer_class = AgencySerializer
