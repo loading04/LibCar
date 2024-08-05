@@ -17,7 +17,7 @@ class Car(models.Model):
         choices=CAR_TYPE_CHOICES,
         default="SEDAN",
     )
-    agency = models.ForeignKey(Agency, related_name='cars', on_delete=models.CASCADE)
+    agency = models.ForeignKey(Agency, related_name="cars", on_delete=models.CASCADE)
     daily_rent = models.DecimalField(max_digits=10, decimal_places=2)
     availability = models.BooleanField(default=True)
 
