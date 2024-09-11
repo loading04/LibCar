@@ -10,7 +10,6 @@ class RentalListeCreate(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated]
 
 
-
 class RentalRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = Rental.objects.all()
     serializer_class = RentalSerializer
